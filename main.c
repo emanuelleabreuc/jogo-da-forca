@@ -1,18 +1,18 @@
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+#include <stdio.h> // biblioteca entrada e saida
+#include <string.h> // usar strlen
+#include <ctype.h> // usar tolower
 
-#define MAX_ERROS 6
+#define MAX_ERROS 6 
 
 int main() {
-    char palavraSecreta[] = "computador"; // você pode trocar por outra
+    char palavraSecreta[] = "emanuelle"; 
     char palavraDescoberta[50];
     char letra;
     int i, erros = 0, acertos = 0;
     int tamanho = strlen(palavraSecreta);
-    int letrasCertas[50] = {0}; // 1 se a letra foi descoberta
+    int letrasCertas[50] = {0}; 
 
-    // Inicializa com underline
+    
     for (i = 0; i < tamanho; i++) {
         palavraDescoberta[i] = '_';
     }
@@ -28,7 +28,7 @@ int main() {
 
         printf("\nDigite uma letra: ");
         scanf(" %c", &letra);
-        letra = tolower(letra); // trata maiúsculas
+        letra = tolower(letra); 
 
         int acertou = 0;
         for (i = 0; i < tamanho; i++) {
@@ -47,7 +47,7 @@ int main() {
     }
 
     if (acertos == tamanho) {
-        printf("\nParabéns! Você acertou a palavra: %s\n", palavraSecreta);
+        printf("\nVocê acertou a palavra: %s\n", palavraSecreta);
     } else {
         printf("\nVocê perdeu! A palavra era: %s\n", palavraSecreta);
     }
