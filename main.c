@@ -18,7 +18,7 @@ int main() {
     }
     palavraDescoberta[tamanho] = '\0';
 
-    printf("=== JOGO DA FORCA ===\n");
+    printf("bem vindo(a) ao jogo da forca!\n");
 
     while (erros < MAX_ERROS && acertos < tamanho) {
         printf("\nPalavra: ");
@@ -49,7 +49,7 @@ int main() {
     if (acertos == tamanho) {
         printf("\nVocê acertou a palavra: %s\n", palavraSecreta);
     } else {
-        printf("\nVocê perdeu! A palavra era: %s\n", palavraSecreta);
+        printf("\nVocê perdeu :( A palavra era: %s\n", palavraSecreta);
     }
 
     return 0;
